@@ -62,8 +62,10 @@ details
 		四大组件
 		Context   类似 PureMvc Facade 核心类 用于启动 注册 其他3者之间的关联
 		View Meditor 面板 & 控制器 不多描述		所有View 和Meditor 映射关系 在MeditorMap中
-		Controller && Command 控制器 和命令 Robet legs 用命令模式实现控制器所有命令 也注册到CommandMap中
-		Model & Actor 之所以称它为MVCS 是因为Service 部分 和Model具有相同的特性. 所以我的自定义框架中的ServerManager也继承与 Actor
+		Controller && Command 控制器 和命令 Robet legs 用命令模式实现控制器所有命令 
+		也注册到CommandMap中
+		Model & Actor 之所以称它为MVCS 是因为Service 部分 和Model具有相同的特性. 
+		所以我的自定义框架中的ServerManager也继承与 Actor
 		
 		
 		
@@ -72,6 +74,7 @@ details
 		公司的Slot老虎机 项目引擎
 		这边就介绍下轮子的实现 
 		com.aspectgaming.game.compoent.reels包
-		使用装饰器模式 继承虚构类 AbstractReel 实现 一个横向和纵向 带有相同功能的2种轮子。 其中使用ReelAction命令模式 来完成轮子滚动时候发生的特殊事件
+		使用装饰器模式 继承虚构类 AbstractReel 实现 一个横向和纵向 带有相同功能的2种轮子。
+		其中使用ReelAction命令模式 来完成轮子滚动时候发生的特殊事件
 		
 		
