@@ -9,6 +9,7 @@ details
 		   flash as3系统框架
 
 ###		   包简述(com.aspectgaming)
+		   -> algo			A star s寻路相关 ImapModel为寻路数据
 		   -> animation  	工厂模式 和 模板模式实现的一套 适量动画 & 帧动画 播放解决方案	
 		   -> cache  		加载资源缓存 用于读取外部图片 包含外部图片加载器(使用远程代理模式 不用等图片加载完成即可 把容器预先加载到场景中 并可定义一些属性)
 		   -> constant   	各类常量定义
@@ -34,7 +35,8 @@ details
 		   -> item 		物品相关定义封装 
 		   -> itertor 	迭代器实现 提供接口 和一个数组迭代器
 		   -> model  	model类 可派发事件通知 存储相关数据 提供数据的存取方法
-		   -> net 		网络通信 提供 http socket(有PB AMF JSON 等数据协议对应的解析器插件) 等客户端通信工具 并可以由ServerManager统一实现ISERVER接口 通过Server工厂创建对应类型的 收发器
+		   -> net 		网络通信 提供 http socket(有PB AMF JSON 等数据协议对应的解析器插件) 等客户端通信工具 并可以由ServerManager统一实现ISERVER接口 
+		   				通过Server工厂创建对应类型的 收发器
 						ServerManager使用装饰器模式对各类 收发器做封装。
 		   		
 		   	->notify 	消息定义 对应NotifyManager 提供消息工厂 用于创建各类消息
@@ -51,6 +53,8 @@ details
 		2. 需要加载资源 请注册 globaliztgion.controller.AssetLoaderCommand  通过事件即可驱动该控制器
 		3. 如果需要使用网络通信 可以直接初始化使用net.ServerManager  设置init方法。
 		4. 如需使用UI 可以使用ui包中各类轻量级的实现
+		5. 如果要使用 寻路 需要实现 IMapModel 接口 填充 二维数组 地图坐标集(可以遍历一张位图 透明点为不可走区域)  设置格子数等
+		然后使用Astar.getInstance().init()； 初始化寻路  然后使用find方法 传入起始点和结束点 获取路径中经过的点的集合
 		
 		
 ###		Robot Legs简述
