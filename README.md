@@ -9,7 +9,7 @@ details
 		   flash as3系统框架
 
 ###		   包简述(com.aspectgaming)
-		   -> algo			A star s寻路相关 ImapModel为寻路数据
+		   -> algo			A star 寻路相关(开源算法 封装了自己的解析 源码丢失 此版本为反编译版本) ImapModel为寻路数据
 		   -> animation  	工厂模式 和 模板模式实现的一套 适量动画 & 帧动画 播放解决方案	
 		   -> cache  		加载资源缓存 用于读取外部图片 包含外部图片加载器(使用远程代理模式 不用等图片加载完成即可 把容器预先加载到场景中 并可定义一些属性)
 		   -> constant   	各类常量定义
